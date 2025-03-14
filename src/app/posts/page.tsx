@@ -6,9 +6,11 @@ import PostList from "../components/PostList";
 export default function page() {
   return (
     <>
-    <Header />
-    <PostList />
-    <Footer />
+      <Header />
+      <div className="p-6">
+        <PostList />
+      </div>
+      <Footer />
     </>
-  )
+  );
 }

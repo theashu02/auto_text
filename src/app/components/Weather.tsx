@@ -39,7 +39,7 @@ export default function WeatherWidget() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const YOUR_API_KEY = "a56448a798f8a092bb313f7682c24cff";
+  const YOUR_API_KEY = process.env.API;
 
   const fetchWeather = async (e: React.FormEvent) => {
     e.preventDefault();

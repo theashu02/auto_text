@@ -1,42 +1,44 @@
+import Link from "next/link";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t bg-background">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">ModernApp</h3>
+            <h3 className="text-lg font-semibold mb-4">AutoText</h3>
             <p className="text-muted-foreground">
-              A modern React application built with Next.js and shadcn/ui.
+              A modern Weather and posts Application.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#posts"
+                <Link
+                  href="posts"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Posts
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#weather"
+                <Link
+                  href="weather"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Weather
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {currentYear} ModernApp. All rights reserved.</p>
+          <p>&copy; {currentYear} AutoText. All rights reserved.</p>
         </div>
       </div>
     </footer>
