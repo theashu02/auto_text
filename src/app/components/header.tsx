@@ -5,16 +5,17 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "./Toggler";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="border-b bg-background sticky top-0 z-10">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
-            ModernApp
+            AutoText
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,7 +38,7 @@ export default function Header() {
             >
               Weather
             </Link>
-            {/* <Button>Get Started</Button> */}
+            <ModeToggle />
           </nav>
 
           {/* Mobile Navigation */}
@@ -49,7 +50,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <nav className="flex flex-col space-y-4 mt-8">
+              <nav className="flex flex-col space-y-4 mt-8 p-8">
                 <Link
                   href="/"
                   className="font-medium hover:text-primary transition-colors"
@@ -71,7 +72,7 @@ export default function Header() {
                 >
                   Weather
                 </Link>
-                <Button onClick={() => setIsOpen(false)}>Get Started</Button>
+                <ModeToggle />
               </nav>
             </SheetContent>
           </Sheet>
