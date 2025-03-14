@@ -26,18 +26,18 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="#posts"
+              href="posts"
               className="font-medium hover:text-primary transition-colors"
             >
               Posts
             </Link>
             <Link
-              href="#weather"
+              href="weather"
               className="font-medium hover:text-primary transition-colors"
             >
               Weather
             </Link>
-            <Button>Get Started</Button>
+            {/* <Button>Get Started</Button> */}
           </nav>
 
           {/* Mobile Navigation */}
@@ -58,14 +58,14 @@ export default function Header() {
                   Home
                 </Link>
                 <Link
-                  href="#posts"
+                  href="posts"
                   className="font-medium hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Posts
                 </Link>
                 <Link
-                  href="#weather"
+                  href="weather"
                   className="font-medium hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
